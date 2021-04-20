@@ -8,4 +8,7 @@ import retrofit2.http.Path
 interface DotaApiInterface {
     @GET("teams/{team_id}")
     fun getTeamItem(@Path("team_id")id:Int) :Call<TeamListResponse>
+
+    @GET("teams")
+    fun getListTeam() :Call<TeamListResponse>
 }
