@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.fragments.fragment_teams_list">
+    tools:context=".controller.fragments.FragmentTeamsList">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: CREAR LA VISTA DE LISTA DE EQUIPOS. Se puede reutilizar el item de heroes -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center"
+        android:text="HOLA, ESTE ES EL FRAGMENT DE LISTAS DE EQUIPOS" />
 
 </FrameLayout>

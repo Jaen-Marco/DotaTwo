@@ -6,21 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.project.dotatwo.R
-
+import com.project.dotatwo.databinding.FragmentHeroesListBinding
 
 class FragmentHeroesList : Fragment() {
+    private lateinit var binding: FragmentHeroesListBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        binding = FragmentHeroesListBinding.inflate(inflater)
+        return binding.root
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_heroes_list, container, false)
+    //TODO Falta crear el método OnViewCreated donde se configura el servicio (Estudiar corrutinas)
+    //TODO FALTA IMPLEMENTAR EL ADAPTADOR PARA HÉROES
+
+    companion object {
+        fun newInstance(): FragmentHeroesList = FragmentHeroesList()
     }
 
 }
